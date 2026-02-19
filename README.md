@@ -1,3 +1,3 @@
-# goit-markup-hw-05
-hw_5
-https://grrotterr.github.io/goit-markup-hw-05/
+# goit-markup-hw-06
+hw_6
+https://grrotterr.github.io/goit-markup-hw-06/
