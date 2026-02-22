@@ -27,6 +27,12 @@
                     <li><a href="#contacts" class="navi-link ">Contacts</a></li>
                 </ul>
              </nav> 
+
+             <button class="burger" aria-label="Open menu" type="button">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
         
 
             <address class="contacts">
@@ -457,6 +463,70 @@
         
      </footer>
 
+     <div class="mobile-menu-overlay" data-mobile-menu>
+        <button type="button" class="modal-close-btn" data-mobile-menu-close>
+                <svg class="icon-close" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+
+            <nav class="mobile-menu">
+                <ul class="mobile-list">
+                    <li><a href="#studio-link" class="navi-link-mobile">Studio</a></li>
+                    <li><a href="#portfolio-link" class="navi-link-mobile">Portfolio</a></li>
+                    <li><a href="#contacts" class="navi-link-mobile">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-bottom">
+
+                
+                <address class="mobile-contacts">
+                    <a href="tel:+110001111111" class="mobile-phone">
+                    +11 (000) 111-11-11
+                    </a>
+                    <a href="mailto:info@devstudio.com" class="mobile-email">
+                    info@devstudio.com
+                    </a>
+                </address>
+
+                
+                <ul class="mobile-socials">
+                    <li>
+                    <a href="#" class="mobile-social-link">
+                        <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" class="mobile-social-link">
+                        <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" class="mobile-social-link">
+                        <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" class="mobile-social-link">
+                        <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                    </li>
+                </ul>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
     <div class="modal-overlay" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
@@ -517,32 +587,64 @@
 
         </div>
 
+        
+
+        
+
     </div>
    
     <script>
-
+        (() => {
         const modal = document.querySelector('[data-modal]');
         const openBtn = document.querySelector('.button-order');
-        const closeBtn = document.querySelector('[data-modal-close]');
+        const closeBtn = modal.querySelector('[data-modal-close]');
 
-       
         openBtn.addEventListener('click', () => {
             modal.classList.add('is-open');
         });
 
-        
         closeBtn.addEventListener('click', () => {
             modal.classList.remove('is-open');
         });
 
-        
         modal.addEventListener('click', e => {
             if (e.target === modal) {
             modal.classList.remove('is-open');
             }
         });
-
+        })();
     </script>
+
+    <script>
+        (() => {
+        const burgerBtn = document.querySelector('.burger');
+        const mobileMenu = document.querySelector('[data-mobile-menu]');
+        const closeBtn = document.querySelector('[data-mobile-menu-close]');
+        const menuLinks = document.querySelectorAll('.navi-link-mobile');
+
+        if (!burgerBtn || !mobileMenu || !closeBtn) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', closeMobileMenu);
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+        })();
+    </script>
+
 
 
   </body>
