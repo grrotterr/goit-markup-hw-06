@@ -1,7 +1,6 @@
 
 .container {
     width: 100%;
-    max-width: 1158px;
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
@@ -104,6 +103,7 @@ footer{
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
+    padding: 16px 0;
     
  }
 
@@ -116,7 +116,7 @@ footer{
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin: 24px 0;
+    margin:  0;
     gap: 76px;
     
 
@@ -269,7 +269,7 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 40px 0;
+    padding: 72px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -293,18 +293,18 @@ main h2 {
 .hero{
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     justify-content: center;
     align-items: center;
     gap: 48px; 
     margin: 0 auto;
     max-width: 280px;
-     
+    max-width: 320px;
     
     
 }
@@ -438,7 +438,7 @@ main h2 {
 .team{
     width: 100%;                 
     background-color: #F4F4FD;   
-    padding: 40px 0;
+    padding: 96px 0;
     font-family: "Roboto", sans-serif;
 }
 
@@ -564,7 +564,7 @@ main h2 {
 .portfolio{
     width: 100%;               
     background-color: #FFF;  
-    padding: 40px 0;   
+    padding: 96px 0;   
     row-gap: 48px ;
     column-gap: 24px;
     box-sizing: border-box;
@@ -720,7 +720,9 @@ main h2 {
     font-family: 'Roboto', sans-serif;
     text-align: left;
     width: 100%;
-    padding: 60px 16px;
+    padding: 96px 0;
+    padding-left: 16px;
+    padding-right: 16px;
     
 
 }
@@ -1711,6 +1713,7 @@ main h2 {
 
 @media (min-width: 768px) {
     .main-section {
+        padding: 112px 0;
         background-image:
         linear-gradient(
             rgba(46, 47, 66, 0.7),
@@ -1719,10 +1722,20 @@ main h2 {
         url('../images/hero-tablet@1x.jpg');
     }
 
+    .header-line {
+        padding: 24px 0;
+  }
+
+    .container {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .hero {
-        font-size: 40px;
-        line-height: 1.15;
-        max-width: 400px;
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
   }
 
   .portfolio {
@@ -1730,7 +1743,7 @@ main h2 {
   }
 
   .footer {
-        padding: 60px 32px;
+        /* padding: 60px 32px; */
   }
   .footer-container {
         gap: 40px;
@@ -1741,7 +1754,7 @@ main h2 {
 
 @media (min-width: 768px) and (min-resolution: 2dppx) {
     .main-section {
-        padding: 80px 0;
+       
         background-image:
         linear-gradient(
             rgba(46, 47, 66, 0.7),
@@ -1757,7 +1770,7 @@ main h2 {
 
 @media (min-width: 1158px) {
     .main-section {
-        padding: 112px 0;
+        padding: 188px 0;
         background-image:
         linear-gradient(
             rgba(46, 47, 66, 0.7),
@@ -1765,6 +1778,15 @@ main h2 {
         ),
         url('../images/hero-desktop@1x.jpg');
     }
+    .header-line {
+        padding: 24px 0;
+  }
+
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+  }
 
     .team {
         padding: 120px 0;
@@ -1775,7 +1797,7 @@ main h2 {
   }
 
   .footer {
-        padding: 60px 64px; 
+        padding: 100px 0; 
   }
   .footer-container {
         gap: 32px; 
@@ -1784,6 +1806,11 @@ main h2 {
   .modal {
         max-width: 600px;
         padding: 40px;
+  }
+
+  .team,
+  .portfolio {
+        padding: 120px 0;
   }
 }
 
