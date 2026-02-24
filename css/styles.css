@@ -7,7 +7,7 @@
 }
 
 html {
-    height: 100%;
+    
     margin: 0;
     padding: 0;
 }
@@ -23,6 +23,8 @@ body{
     min-height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; 
+    overflow-y: auto;
     
 
 }
@@ -427,7 +429,7 @@ main h2 {
     letter-spacing: 0.02em;
     text-align: center;
     color: rgba(46, 47, 66, 1);
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .feature-describe{
@@ -476,8 +478,10 @@ main h2 {
 
 .team-list{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 24px;
+    gap: 48px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1224,7 +1228,7 @@ main h2 {
 .team-list {
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .team-member {
@@ -1235,7 +1239,7 @@ main h2 {
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    gap: 24px;              
+    gap: 48px;              
     padding: 0;
     margin: 0 auto;      
     list-style: none;
@@ -1252,7 +1256,7 @@ main h2 {
 .footer {
     width: 100%;
     background-color: #2E2F42;
-    padding: 80px 16px; 
+    padding: 96px 16px; 
     box-sizing: border-box;
     flex-shrink: 0; 
 }
@@ -1261,7 +1265,7 @@ main h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 72px;
     text-align: center;
     max-width: 100%;
 }
@@ -1323,7 +1327,8 @@ main h2 {
 
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;      
+    min-height: 100vh; 
 }
 
 .modal-close-btn {
@@ -1537,17 +1542,18 @@ main h2 {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
+        gap: 64px 24px;
     }
 
     .portfolio-list {
         flex-direction: row; 
         flex-wrap: wrap;    
         justify-content: center; 
-        gap: 24px;
+        gap: 72px 24px;
     }
 
     .portfolio-item {
+        width: calc((100% - 24px) / 2);
         flex: 0 0 356px;    
     }
 
@@ -1656,14 +1662,21 @@ main h2 {
 
     .team-list {
         flex-wrap: nowrap;
+        gap: 24px;
+
+    }
+
+    .team-member {
+        width: calc((100% - 72px) / 4);
     }
 
     .portfolio-list {
         justify-content: flex-start; 
-        gap: 24px 48px; 
+        gap: 48px 24px; 
     }
 
      .portfolio-item {
+        width: calc((100% - 48px) / 3);
         flex: 0 0 calc((100% - 2 * 48px) / 3); 
         max-width: 360px;                      
     }
@@ -1694,7 +1707,7 @@ main h2 {
     .contacts {
         display: flex;
         flex-direction: column; 
-        gap: 8px;
+        gap: 12px;
         align-items: flex-start; 
     }
 
